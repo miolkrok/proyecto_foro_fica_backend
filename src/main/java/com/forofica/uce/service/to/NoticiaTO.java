@@ -18,7 +18,11 @@ public class NoticiaTO extends RepresentationModel<NoticiaTO> implements Seriali
 	private String imagen;
 
 	private String video;
-	
+
+	private String tipo;
+
+	private String fuente;
+
 	private LocalDateTime fechaPublicacion;
 
 	// SET y GET
@@ -60,6 +64,22 @@ public class NoticiaTO extends RepresentationModel<NoticiaTO> implements Seriali
 
 	public void setVideo(String video) {
 		this.video = video;
+	}
+
+	public String getTipo() {
+		return tipo;
+	}
+
+	public void setTipo(String tipo) {
+		this.tipo = tipo;
+	}
+
+	public String getFuente() {
+		return fuente;
+	}
+
+	public void setFuente(String fuente) {
+		this.fuente = fuente;
 	}
 
 	public LocalDateTime getFechaPublicacion() {

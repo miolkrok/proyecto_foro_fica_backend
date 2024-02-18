@@ -31,6 +31,12 @@ public class Noticia {
 	@Column(name = "noti_video")
 	private String video;
 
+	@Column(name = "noti_tipo")
+	private String tipo;
+
+	@Column(name = "noti_fuente")
+	private String fuente;
+
 	@Column(name = "noti_fecha_publicacion")
 	private LocalDateTime fechaPublicacion;
 
@@ -73,6 +79,22 @@ public class Noticia {
 
 	public void setVideo(String video) {
 		this.video = video;
+	}
+
+	public String getTipo() {
+		return tipo;
+	}
+
+	public void setTipo(String tipo) {
+		this.tipo = tipo;
+	}
+
+	public String getFuente() {
+		return fuente;
+	}
+
+	public void setFuente(String fuente) {
+		this.fuente = fuente;
 	}
 
 	public LocalDateTime getFechaPublicacion() {

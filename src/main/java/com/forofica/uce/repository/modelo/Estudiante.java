@@ -37,19 +37,22 @@ public class Estudiante {
 
 	@Column(name = "estu_suscripcion")
 	private Boolean suscripcion;
-	
+
+	@Column(name = "estu_semestre")
+	private String semestre;
+
 	@Column(name = "estu_video")
 	private String video;
 
-	@Column(name = "estu_imagen",columnDefinition = "text")
+	@Column(name = "estu_imagen", columnDefinition = "text")
 	private String imagen;
-	
+
 	@OneToMany(mappedBy = "estudiante", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
 	private List<Queja> quejas;
-	
+
 	@OneToMany(mappedBy = "estudiante", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
 	private List<Comentario> comentarios;
-	
+
 	@OneToMany(mappedBy = "estudiante", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
 	private List<Foro> foros;
 
@@ -86,6 +89,14 @@ public class Estudiante {
 		this.apellido = apellido;
 	}
 
+	public String getSemestre() {
+		return semestre;
+	}
+
+	public void setSemestre(String semestre) {
+		this.semestre = semestre;
+	}
+
 	public Boolean getSuscripcion() {
 		return suscripcion;
 	}
@@ -110,5 +121,4 @@ public class Estudiante {
 		this.quejas = quejas;
 	}
 
-	
 }

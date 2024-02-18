@@ -7,20 +7,20 @@ import org.springframework.hateoas.RepresentationModel;
 public class EstudianteTO extends RepresentationModel<EstudianteTO> implements Serializable {
 
 	private static final long serialVersionUID = 1L;
-	
+
 	private Integer id;
-	
+
 	private String cedula;
-	
+
 	private String nombre;
-	
+
 	private String apellido;
-	
+
+	private String semestre;
+
 	private Boolean suscripcion;
-	
+
 	private String imagen;
-	
-	
 
 	// SET y GET
 	public Integer getId() {
@@ -55,6 +55,14 @@ public class EstudianteTO extends RepresentationModel<EstudianteTO> implements S
 		this.apellido = apellido;
 	}
 
+	public String getSemestre() {
+		return semestre;
+	}
+
+	public void setSemestre(String semestre) {
+		this.semestre = semestre;
+	}
+
 	public Boolean getSuscripcion() {
 		return suscripcion;
 	}
@@ -74,5 +82,5 @@ public class EstudianteTO extends RepresentationModel<EstudianteTO> implements S
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
-	
+
 }
