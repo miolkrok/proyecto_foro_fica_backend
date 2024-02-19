@@ -34,10 +34,10 @@ public class NoticiaImplService implements INoticiaService {
 		return listaTO;
 	}
 
-	public void actualizar (Noticia noticia) {
+	public void actualizar(Noticia noticia) {
 		this.noticiaRepository.actualizar(noticia);
 	}
-	
+
 	@Override
 	public void eliminar(Integer id) {
 		this.noticiaRepository.eliminar(id);
@@ -50,6 +50,8 @@ public class NoticiaImplService implements INoticiaService {
 		noticiaTO.setTexto(noticia.getTexto());
 		noticiaTO.setImagen(noticia.getImagen());
 		noticiaTO.setVideo(noticia.getVideo());
+		noticiaTO.setTipo(noticia.getTipo());
+		noticiaTO.setFuente(noticia.getFuente());
 		noticiaTO.setFechaPublicacion(noticia.getFechaPublicacion());
 		return noticiaTO;
 	}

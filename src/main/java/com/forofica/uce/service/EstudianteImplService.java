@@ -59,6 +59,7 @@ public class EstudianteImplService implements IEstudianteService {
 		estu.setId(estudiante.getId());
 		estu.setCedula(estudiante.getCedula());
 		estu.setNombre(estudiante.getNombre());
+		estu.setSemestre(estudiante.getSemestre());
 		estu.setSuscripcion(estudiante.getSuscripcion());
 		estu.setApellido(estudiante.getApellido());
 		estu.setImagen(estudiante.getImagen());

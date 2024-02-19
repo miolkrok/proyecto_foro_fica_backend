@@ -61,6 +61,7 @@ public class ComentarioServiceImpl implements IComentarioService {
 		estudiante.setCedula(comentario.getEstudiante().getCedula());
 		estudiante.setNombre(comentario.getEstudiante().getNombre());
 		estudiante.setApellido(comentario.getEstudiante().getApellido());
+		estudiante.setSemestre(comentario.getEstudiante().getSemestre());
 
 		ForoTO f = new ForoTO();
 		f.setId(comentario.getForo().getId());
