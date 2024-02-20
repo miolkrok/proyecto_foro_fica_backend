@@ -34,7 +34,7 @@ public class Noticia {
 	@Column(name = "noti_tipo")
 	private String tipo;
 
-	@Column(name = "noti_fuente")
+	@Column(name = "noti_fuente", columnDefinition = "text")
 	private String fuente;
 
 	@Column(name = "noti_fecha_publicacion")
